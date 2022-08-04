@@ -1,3 +1,8 @@
+
+# Magic Sand for RealSense vs2019 (openframeworks 0.9.8)
+Build at-nakamura's Magic Sand RealSense Project to VisualStudio 2019 (openframeworks 0.9.8)
+
+
 # Magic Sand for RealSense
 Magic Sand for RealSense is a software for operating an augmented reality sandbox like the [Augmented Reality Sandbox](https://arsandbox.ucdavis.edu)
 developped by [UC Davis](http://idav.ucdavis.edu/~okreylos/ResDev/SARndbox/).
