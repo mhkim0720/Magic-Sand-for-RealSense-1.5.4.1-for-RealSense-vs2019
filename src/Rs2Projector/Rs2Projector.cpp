@@ -319,12 +319,15 @@ void Rs2Projector::update()
         // Is the depth image stabilized
         imageStabilized = rs2grabber.isImageStabilized();
         
+
         // Are we calibrating ?
+		///*
         if (applicationState == APPLICATION_STATE_CALIBRATING && !waitingForFlattenSand) 
 		{
             updateCalibration();
         } 
 		else 
+		//*/
 		{
 			fboMainWindow.begin();
             if (drawRs2View || drawRs2ColorView)
@@ -844,6 +847,8 @@ void Rs2Projector::updateProjRs2AutoCalibration()
             errorcounts = ReprojectionError;
 			ofLogVerbose("Rs2Projector") << "autoCalib(): ReprojectionError " + ofToString(ReprojectionError);
 
+			//@@강제실행
+			/*
 			if (ReprojectionError > 50)
 			{
 				ofLogVerbose("Rs2Projector") << "autoCalib(): ReprojectionError too big. Something wrong with projection matrix";
@@ -854,6 +859,7 @@ void Rs2Projector::updateProjRs2AutoCalibration()
 				updateStatusGUI();
 				return;
 			}
+			*/
             init_FBOprojector();
 
 			// Rasmus update - I am not sure it is good to override the manual ROI
